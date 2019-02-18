@@ -78,15 +78,18 @@ public class jebnkinsTest extends HomePage {
 		ResultatRecherche pageResultat = new ResultatRecherche();
 
 		pageResultat = homePage.rechercheGlobale(barreRecherche, searchButton, recherchePersonnage);
+		System.out.println("Acces a la recherche LARDEUR");
+
 
 		WebElement pNj = driver.findElement(By.xpath("//a[@href='#npcs']/div[contains(.,'PNJ')]"));
 		pageResultat.accesOnglet(pNj);
+		System.out.println("Acces a l onglet PNJ");
+
 
 
 		//WebElement tableResultat = driver.findElement(By.xpath("//div[@id='tab-npcs']/descendant::table[@class='listview-mode-default']"));
 		WebElement personageLardeur = driver.findElement(By.xpath("//td[@class='icon-boss-padded']/a"));
-
-
+		System.out.println("Acces au personnage Lardeur tete de mort");
 
 
 		PagePersonnage pageLardeur = new PagePersonnage();
@@ -102,6 +105,7 @@ public class jebnkinsTest extends HomePage {
 		PageItem pageDeuxiemeObjet = new PageItem();
 		pageDeuxiemeObjet = pageLardeur.accederItem(item1);
 
+		System.out.println("**********************FIN DES TESTS**********************");
 
 	}
 
